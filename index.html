@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Semântica Essencial</title>
+    <!-- Carrega o Tailwind CSS para estilização rápida e moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter como padrão para uma leitura moderna e clara */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- HEADER: Representa o conteúdo introdutório ou um grupo de links de navegação. -->
+    <header class="bg-indigo-600 text-white shadow-lg p-4 md:p-6 sticky top-0 z-10">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- H1: O título mais importante da página. -->
+            <h1 class="text-3xl font-bold mb-3 md:mb-0">Website Semântico Simples</h1>
+            
+            <!-- NAV: Contém links de navegação primários. -->
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#conteudo" class="hover:text-indigo-200 transition duration-300">Início</a></li>
+                    <li><a href="#artigos" class="hover:text-indigo-200 transition duration-300">Artigos</a></li>
+                    <li><a href="#sobre" class="hover:text-indigo-200 transition duration-300">Sobre</a></li>
+                    <li><a href="#contato" class="hover:text-indigo-200 transition duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: Contém o conteúdo exclusivo e central do documento. Só deve haver um por página. -->
+    <main class="container mx-auto p-4 md:p-8 flex-grow">
+        
+        <!-- SECTION: Agrupa conteúdo tematicamente relacionado. -->
+        <section id="conteudo" class="mb-10 bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-700">O Poder da Semântica HTML</h2>
+            <p class="text-gray-600">
+                Utilizar tags como `<header>`, `<main>`, `<section>`, `<article>` e `<footer>` não apenas organiza o código, 
+                mas também melhora a acessibilidade e o SEO, permitindo que leitores de tela e motores de busca 
+                compreendam a estrutura e a importância do seu conteúdo.
+            </p>
+        </section>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            
+            <!-- SECTION (Artigos): Agrupa vários artigos de blog ou posts. -->
+            <section id="artigos" class="lg:w-3/4">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Posts Recentes</h2>
+
+                <!-- ARTICLE: Contém um conteúdo independente e autossuficiente (como um post de blog). -->
+                <article class="bg-white p-6 rounded-xl shadow-md mb-6 border-l-4 border-teal-500">
+                    <header>
+                        <h3 class="text-xl font-semibold mb-2 text-teal-700">Primeiro Post: Tags Essenciais</h3>
+                        <p class="text-sm text-gray-500">Publicado em <time datetime="2025-12-04">04 de Dezembro de 2025</time></p>
+                    </header>
+                    <p class="mt-3 text-gray-600">
+                        O HTML Semântico fornece significado ao conteúdo da web. Em vez de usar apenas `div` para tudo, 
+                        usamos tags que descrevem o tipo de conteúdo que elas contêm. Isso é crucial para o futuro da web.
+                    </p>
+                    <footer>
+                        <!-- Rodapé específico do artigo, podendo conter tags ou links de autor. -->
+                        <a href="#" class="inline-block mt-4 text-indigo-600 hover:text-indigo-800 font-medium">Leia Mais &rarr;</a>
+                    </footer>
+                </article>
+
+                <article class="bg-white p-6 rounded-xl shadow-md border-l-4 border-yellow-500">
+                    <header>
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-700">Segundo Post: Acessibilidade</h3>
+                        <p class="text-sm text-gray-500">Publicado em <time datetime="2025-11-28">28 de Novembro de 2025</time></p>
+                    </header>
+                    <p class="mt-3 text-gray-600">
+                        A acessibilidade web é fundamental. As tags semânticas são o primeiro passo para garantir que 
+                        todos os usuários, independentemente de suas habilidades, possam consumir seu conteúdo.
+                    </p>
+                    <footer>
+                        <a href="#" class="inline-block mt-4 text-indigo-600 hover:text-indigo-800 font-medium">Saiba Mais &rarr;</a>
+                    </footer>
+                </article>
+            </section>
+
+            <!-- ASIDE: Contém conteúdo relacionado ao conteúdo principal, mas separado dele (barra lateral). -->
+            <aside id="sobre" class="lg:w-1/4 bg-gray-100 p-6 rounded-xl shadow-md border border-gray-200">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">Links Relacionados</h3>
+                <nav class="space-y-2">
+                    <!-- NAV dentro de ASIDE para navegação secundária -->
+                    <a href="#" class="block text-indigo-600 hover:text-indigo-800 transition duration-300">Guia de Acessibilidade</a>
+                    <a href="#" class="block text-indigo-600 hover:text-indigo-800 transition duration-300">Documentação W3C</a>
+                    <a href="#" class="block text-indigo-600 hover:text-indigo-800 transition duration-300">Ferramentas de SEO</a>
+                </nav>
+
+                <section class="mt-6">
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Contato Rápido</h4>
+                    <address id="contato" class="text-sm text-gray-600">
+                        <!-- ADDRESS: Informações de contato do autor/dono da seção -->
+                        Email: <a href="mailto:contato@exemplo.com" class="text-indigo-500 hover:underline">contato@exemplo.com</a><br>
+                        Telefone: (00) 1234-5678
+                    </address>
+                </section>
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- FOOTER: Contém informações sobre o autor, direitos autorais, ou links de navegação relacionados. -->
+    <footer class="bg-gray-800 text-white p-6 mt-10">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2025 - Projeto de Estrutura Semântica. Todos os direitos reservados.</p>
+            <nav class="mt-2 text-xs">
+                <!-- NAV no footer para links legais ou secundários -->
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidade</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de Uso</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
